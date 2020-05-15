@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:np1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="311.439" Width="305.762">
+    <StackPanel Margin="10">
+        <Label>Search</Label>
+        <TextBox Name="tbSearch"></TextBox>
+        <Button Margin="0 5 0 10" Click="Search_Click">Search</Button>
+        <ListBox Name="lbPersons" Height="150">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding Name}"/>
+                        <Label Content="{Binding Number}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Margin="0 5">Add</Button>
+    </StackPanel>
 </Window>

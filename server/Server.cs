@@ -46,8 +46,11 @@ namespace server
                     }
                     while (client.Available > 0);
                     string data = Encoding.UTF8.GetString(buffer, 0, countBytes);
-
-                    Person[] tmp = context.Persons.Where(x=>x.Name.Contains(data)).ToArray();
+                    Person[] tmp;
+                    using (context = new PersonsContext())
+                    {
+                        tmp = context.Persons.Where(x => x.Name.Contains(data)).ToArray();
+                    }
                     byte[] response = Formatter.Serialize(tmp);
                     client.Send(response);
                     client.Shutdown(SocketShutdown.Both);

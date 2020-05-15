@@ -21,6 +21,7 @@ namespace server
 
         public string Name { get; set; }
         public string Number { get; set; }
+        public Person() { }
         public Person(string name, string number)
         {
             Name = name;

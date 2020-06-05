@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:np1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="311.439" Width="305.762">
+        Title="MainWindow" Height="286.04" Width="305.762">
     <StackPanel Margin="10">
         <Label>Search</Label>
         <TextBox Name="tbSearch"></TextBox>
@@ -20,6 +20,5 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Margin="0 5">Add</Button>
     </StackPanel>
 </Window>
